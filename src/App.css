@@ -1,38 +1,22 @@
-.App {
-  text-align: center;
+body {
+  width: 70%;
+  background-image: url("https://images.unsplash.com/photo-1428447207228-b396f310848b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input {
+  height: 35px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-bar {
+  background-color: transparent;
 }
+/* .meteo {
+  background-color: transparent;
+} */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-meteo {
+  /* background-color: transparent; */
+  -webkit-box-shadow: 4px 5px 7px 0px #000000;
+  box-shadow: 4px 5px 7px 0px #000000;
 }
