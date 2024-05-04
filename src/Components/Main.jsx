@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Button, Col, Row } from "react-bootstrap";
+import { Alert, Button, Col, Row } from "react-bootstrap";
 import { Search } from "react-bootstrap-icons";
 import InfoMeteo from "./InfoMeteo";
+import MeteoWeek from "./MeteoWeek";
 
 const Main = () => {
   const [location, setLocation] = useState("");
@@ -47,13 +48,19 @@ const Main = () => {
           Cerca
         </Button>
       </div>
-      {dati && (
+      {dati ? (
         <Row>
           <Col sm={12} lg={4}>
             <InfoMeteo lat={lat} lon={lon} città={città} />
           </Col>
-          <Col sm={12} lg={8}></Col>
+          <Col sm={12} lg={8}>
+            <MeteoWeek lat={lat} lon={lon} />
+          </Col>
         </Row>
+      ) : (
+        <Alert variant="info" className="mt-4 text-center fs-3 fw-bold">
+          Cerca una Città
+        </Alert>
       )}
     </div>
   );
