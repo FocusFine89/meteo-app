@@ -10,6 +10,7 @@ const Main = () => {
   const [lat, setLat] = useState(0);
   const [lon, setLon] = useState(0);
   const [dati, setDati] = useState(false);
+  const [errorLocation, setErrorLocation] = useState(false);
 
   const getLocation = () => {
     if (location) {
@@ -29,7 +30,7 @@ const Main = () => {
           setDati(true);
         });
     } else {
-      throw new Error("Non riesco a trovare questa Location");
+      setErrorLocation(true);
     }
   };
 
@@ -60,6 +61,12 @@ const Main = () => {
       ) : (
         <Alert variant="info" className="mt-4 text-center fs-3 fw-bold">
           Cerca una Città
+        </Alert>
+      )}
+
+      {errorLocation && (
+        <Alert variant="danger" className="mt-4 text-center fs-3 fw-bold">
+          Errore! prova a cercare un'altra città
         </Alert>
       )}
     </div>
