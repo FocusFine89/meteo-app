@@ -34,7 +34,7 @@ const MeteoWeek = (props) => {
       {meteoCard.slice(0, 6).map((card) => {
         return (
           <Col
-            sm={12}
+            sm={6}
             md={4}
             className=" d-flex justify-content-center mt-4"
             key={card.dt}
